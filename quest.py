@@ -65,6 +65,7 @@ else:
 
 def welcome():
     print('Welcome to the Team sing up program\nCertain questions will be asked to ensure that you\'re a good fit.\nGoodluck!')
+    print('(one investor is required)')
 def question1():
     try:
         quest1 = int(input('How old are you: '))
