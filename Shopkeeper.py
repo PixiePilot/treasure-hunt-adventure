@@ -78,14 +78,29 @@ def sale():
     ropeamount = int(input("How many meters of rope would you like to buy\n they're 4 gold each: "))
     for x in range(ropeamount):
         global rope
-        rope = rope+3
+        rope = rope+0.14
     print('Great that will be,',(rope)," gold")
 
-    global backpackamount
-    backpackamount = int(input("How many tinder boxes would you like to buy\n they're 4 gold each: "))
-    for x in range(backpackamount):
-        global backpack
-        backpack = backpack+3
-    print('Great that will be,',(backpack)," gold")
+    global muskamount
+    muskamount = int(input("How many muskeeto nets would you like to buy\n they're 4 gold each: "))
+    for x in range(muskamount):
+        global musk
+        musk = musk+0.12
+    print('Great that will be,',(musk)," gold")
 
-sale()
+    global torchamount
+    torchamount = int(input("How many torches would you like to buy\n they're 4 gold each: "))
+    for x in range(torchamount):
+        global torch
+        torch = torch+0.3
+    print('Great that will be,',(torch)," gold")
+
+    global pouchamount
+    pouchamount = int(input("How many water pouches would you like to buy\n they're 4 gold each: "))
+    for x in range(pouchamount):
+        global pouch
+        pouch = pouch+4
+    print('Great that will be,',(pouch)," gold")
+    return(shovel + climbing + latern + oil + rod + tinder + backpack + rope + musk + torch + pouch," Gold will be your total.")
+a = sale()
+print(a)
