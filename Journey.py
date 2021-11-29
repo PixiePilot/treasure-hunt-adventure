@@ -34,12 +34,14 @@ def costs():
     except ValueError:
         print('Please enter a number.')
         costs()
-    horse = 0.8 / 2
+    _ = people / 2
+    horse = 0.8
+    horse = _ * horse
     tent = 8
     inn = 0.4
     innhorse = 0.18
-    price = float(tent + inn + innhorse + horse)
-    price = people * price + 4
+    price = float(tent + inn + innhorse)
+    price = people * price + horse
     price = float(round(price, 2))
     return price
     
