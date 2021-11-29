@@ -117,7 +117,7 @@ def questioninvestor():
     except ValueError:
         ('Please enter an amount in numbers.')
         questioninvestor()
-    if pouch > 80:
+    if pouch > 300:
         return True
     else:
         return False
