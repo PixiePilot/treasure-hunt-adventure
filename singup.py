@@ -99,6 +99,7 @@ def questionhealer():
         return True
     else:
         return False
+
 def questionhealer2():
     try:
         lives = int(input('How many lives have you lost :'))
@@ -109,6 +110,40 @@ def questionhealer2():
         return True
     else:
         return False
+
+def questioninvestor():
+    try:
+        pouch = int(input('How much gold do you have: '))
+    except ValueError:
+        ('Please enter an amount in numbers.')
+        questioninvestor()
+    if pouch > 80:
+        return True
+    else:
+        return False
+
+def questioninvestor2():
+
+        company = input('What is the name of your company: ')
+        return company
+
+def questionranger():
+    guide = int(input('How many times have you been a guide so far: '))
+    if guide < 2:
+        return False
+    elif guide > 1:
+        return True
+
+def questionranger2():
+    certificate = input('Do you have a certificate for your job: ')
+    certificate.lower
+    if certificate == "yes":
+        return True
+    elif certificate == "no":
+        return False
+    else:
+        print('Please type either Yes or No.')
+        questionranger2()
 
 def signup():
     welcome()
@@ -140,27 +175,49 @@ def signup():
         return False
     
     match job:
-        case "healer":
-            healer = questionhealer()
-            if healer == True:
-                print()
-            else:
-                print("Sorry, you\'re not a good fit for us")
-                return 0
-        case "investor":
-            print()
-        case "ranger":
-            print()
-        case "thief":
-            thief = questionthief()
-            if thief == False:
-                print('Sorry, You\'re not a good fit for us')
-                return 0
-            thief2 = questionthief2()
-            if thief2 == False:
-                print('Sorry, You\'re not a good fit for us')
-                return 0
-            Accept = True
-            print('Congratulations, you\'ve been accepted!')
+            case "healer":
+                healer = questionhealer()
+                if healer == True:
+                    print()
+                else:
+                    print("Sorry, you\'re not a good fit for us")
+                    return 0
+                healer2 = questionhealer2()
+                if healer2 == True:
+                    print()
+                else:
+                    print("Sorry, you\'re not a good fit for us")
+                    return 0            
+            case "investor":
+                questinvestor = questioninvestor()
+                if questinvestor == True:
+                    print()
+                else:
+                    return 0
+                questinvestor2 = questioninvestor2()
+                print(questinvestor2, ",I know of that company, It has a very good reputation.\nYou\'re hired!")
+            case "ranger":
+                questranger = questionranger()
+                
+                if questranger == True:
+                    print()
+                else:
+                    return 0
+                questranger2 = questionranger2()
+                if questranger2 == True:
+                    print('You\'re hired!')
+                else:
+                    return 0
+            case "thief":
+                thief = questionthief()
+                if thief == False:
+                    print('Sorry, You\'re not a good fit for us')
+                    return 0
+                thief2 = questionthief2()
+                if thief2 == False:
+                    print('Sorry, You\'re not a good fit for us')
+                    return 0
+                Accept = True
+                print('Congratulations, you\'ve been accepted!')
 
 signup()
